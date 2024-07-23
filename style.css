@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --primary-color: #f60f20;
+  --secondary-color: #1b206e;
+}
+
+/* BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+p {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+  margin-top: 10px;
+}
+
+section.home {
+  flex-direction: row;
+  
+}
+
+.login-button {
+  background-color: #ff7f50;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 2.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #8c1aff;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+/* HOMEPAGE */
+ .home-content {
+  z-index: 10;
+  max-width: 800px;
+} 
+
+.image-container {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.image-container .items {
+  
+  width: 300px;
+  height: 300px;
+  margin: 4px;
+}
+
+.image-container .items img {
+  width: 100%;
+  height: 100%;
+}
+
+/* SERVICES PAGE */
+.services {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.services .service {
+  padding: 25px;
+}
+
+.services .service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--secondary-color);
+}
+
+.services .service .icon img {
+  max-width: 100px;
+}
+
+/* WORK PAGE */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.portfolio .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+
+.portfolio .item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* CONTACT */
+/* The contact container sets relative positioning, full width, margin from the top, and uses flexbox for layout */
+.contact {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-form {
+  position: relative;
+  background: #f9f9f9;
+  width: calc(100% - 400px);  /* Calculate width based on the remaining space */
+  padding: 60px 40px 20px; /* Padding inside the form container */
+}
+
+.contact-form form {
+  width: 100%;  /* Ensures form elements take full width */
+}
+
+.contact-form .row {
+  width: 100%;
+  display: flex;  /* Row within the contact form for flexbox layout */
+}
+
+.contact-form .input50 {
+  width: 50%;
+  margin: 0 10px;  /* Horizontal margin */
+}
+
+.contact-form .input100 {
+  width: 100%;
+  margin: 0 10px;  /* Styling for 50% width input fields within the row */
+
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);  /* Border with transparency */
+  color: #111;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+  outline: none; /* Remove outline */
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;  /* Disable textarea resizing */
+}
+
+.contact-form .row textarea {
+  height: 150px;  /* Specific height for textarea elements */
+}
+
+.contact-form .row input[type="submit"] {
+  background-color: var(--secondary-color); /* Secondary color from CSS variables */
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer; /* Pointer cursor */
+}
+
+.contact-info {
+  width: 350px;
+  background: #f9f9f9;
+  padding: 60px 40px 20px;
+}
+
+.contact-info .info-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.contact-info .info-box .contact-icon {
+  width: 20px;
+  margin-right: 40px;
+}
+
+.contact-info .info-box .details h4 {
+  color: var(--secondary-color);
+}
+
+/* Styling for paragraphs and links within the details section */
+.contact-info .info-box .details p,
+.contact-info .info-box .details a {
+  color: #111;
+}
+
+@media (min-width: 600px) {
+  
+  .image-container {
+    flex-direction: row;
+  } 
+
+  .logo {
+    top: 10px;
+    left: 40px;
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 100px 40px;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 30px 30px 20px;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .services .service {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
